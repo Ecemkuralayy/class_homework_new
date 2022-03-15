@@ -1,31 +1,27 @@
 package tr.edu.maltepe.oop;
 
-public class Student {
-    String firstName;
-    String lastName;
-    int studentNo;
-    private long TCKN;
+public class Student extends Person {
+    private int ıdd;
+    private String lesson;
 
-    public Student(String firstName,String lastName, int studentNo, long TCKN){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.studentNo = studentNo;
-        this.TCKN = TCKN;
+
+    public Student(int ıdd) {
+
+        this.ıdd = ıdd;
+        this.lesson=lesson;
     }
 
-    public void learns(){
-        System.out.println("Student learns");
+
+    public int getId(){
+
+        return ıdd;
     }
-    public void studies(){
-        System.out.println("Student studies");
+
+    public void setId(int ıdd) {
+
+        this.ıdd = ıdd;
     }
-    public void setStudentNo(int studentNo){
-        this.studentNo = studentNo;
-    }
-    public void setTCKN(long TCKN){
-        this.TCKN = TCKN;
-    }
-    public long getTCKN(){
-        return TCKN;
+    public void learning () {
+        System.out.println(getName() +" is learning " +lesson);
     }
 }

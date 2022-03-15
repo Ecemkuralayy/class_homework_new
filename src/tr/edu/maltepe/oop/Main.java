@@ -1,75 +1,57 @@
 package tr.edu.maltepe.oop;
 
-import jdk.swing.interop.SwingInterOpUtils;
 
 public class Main {
 
     public static void main(String[] args) {
-        Student firstStudent = new Student("Ecem", "Kuralay", 190704028, 35647891866L);
+        Prof prof1 = new Prof();
+        prof1.setName("Ensar Gül");
+        prof1.setAge(60);
+        prof1.setDepartment("software engineeer");
+        prof1.setLesson("oop");
 
-        firstStudent.learns();
-        firstStudent.studies();
-
-        Student secondStudent = new Student("Nur","Karakaya", 200704006,12457892088L );
-
-
-
-        Student thirdStudent = new Student("Yusuf", "Akbulut", 190304033,12345678122L );
-
-
-        Person2 myPerson2 = new Person2();
-        myPerson2.firstName = "Beyza";
-        myPerson2.lastName = "KAVAZ";
-        myPerson2.studentNo = 190304012;
-        myPerson2.setTCKN(98765432188L);
+        Prof prof2 = new Prof();
+        prof2.setName("Hamit Topuz");
+        prof2.setAge(53);
+        prof2.setDepartment("industry engineer");
+        prof2.setLesson("probability and statictic");
 
 
-        Professor firstProfessor = new Professor();
-        firstProfessor.FirstName = "Ensar";
-        firstProfessor.LastName = "GÜL";
-        firstProfessor.teaches();
-        firstProfessor.help();
+        Student student1 = new Student();
+        student1.setName("Deniz");
+        student1.setAge(21);
+        student1.setDepartment("computer engineer");
+        student1.setId(190704021);
 
-        Professor secondProfessor = new Professor();
-        secondProfessor.FirstName = "Raif";
-        secondProfessor.LastName = "ÖNVURAL";
+        Student student2 = new Student();
+        student2.setName("Şevval");
+        student2.setAge(22);
+        student2.setDepartment("law");
+        student2.setId(190703215);
 
-        Person myPerson = new Person();
-        myPerson.FirstName = "Kayhan";
-        myPerson.LastName = "ERCİYEŞ";
 
-        System.out.println("PROFESSORS:");
-        System.out.println("             ");
-        System.out.println(firstProfessor.FirstName);
-        System.out.println(firstProfessor.LastName);
-        System.out.println("                     ");
-        System.out.println(secondProfessor.FirstName);
-        System.out.println(secondProfessor.LastName);
-        System.out.println("                     ");
-        System.out.println(myPerson.FirstName);
-        System.out.println(myPerson.LastName);
-        System.out.println("                    ");
-        System.out.println("STUDENTS:");
-        System.out.println("                      ");
-        System.out.println(firstStudent.firstName);
-        System.out.println(firstStudent.lastName);
-        System.out.println(firstStudent.studentNo);
-        System.out.println(firstStudent.getTCKN());
-        System.out.println("                     ");
-        System.out.println(secondStudent.firstName);
-        System.out.println(secondStudent.lastName);
-        System.out.println(secondStudent.studentNo);
-        System.out.println(secondStudent.getTCKN());
-        System.out.println("                    ");
-        System.out.println(thirdStudent.firstName);
-        System.out.println(thirdStudent.lastName);
-        System.out.println(thirdStudent.studentNo);
-        System.out.println(thirdStudent.getTCKN());
-        System.out.println("                ");
-        System.out.println(myPerson2.firstName);
-        System.out.println(myPerson2.lastName);
-        System.out.println(myPerson2.studentNo);
-        System.out.println(myPerson2.getTCKN());
+        System.out.println("prof."+ prof1.getName());
+        System.out.println(prof1.getAge());
+        System.out.println(prof1.getDepartment());
+        prof1.teaches();
+        System.out.println("\n");
+        System.out.println("prof."+ prof2.getName());
+        System.out.println(prof2.getAge());
+        System.out.println(prof2.getDepartment());
+        prof2.teaches();
+        System.out.println("\n");
+        System.out.println(student1.getName());
+        System.out.println(student1.getAge());
+        System.out.println(student1.getDepartment());
+        System.out.println(student1.getId() +"");
+        student1.learning();
+        System.out.println("\n");
+        System.out.println(student2.getName());
+        System.out.println(student2.getAge());
+        System.out.println(student2.getDepartment());
+        System.out.println(student2.getId() +"");
+        student2.learning();
+
 
     }
 }
